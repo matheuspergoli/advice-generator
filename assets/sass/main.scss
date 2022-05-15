@@ -5,3 +5,62 @@ $light-cyan: hsl(193, 38%, 86%);
 $neon-green: hsl(150, 100%, 66%);
 $grayish-blue: hsl(217, 19%, 38%);
 $dark-grayish-blue: hsl(217, 19%, 24%);
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 1.5rem;
+  background-color: $dark-blue;
+}
+
+.main-box {
+  position: relative;
+  max-width: 50rem;
+  border-radius: 1rem;
+  padding: 3.5rem;
+  background-color: $dark-grayish-blue;
+
+  p:nth-of-type(1) {
+    font-size: 1.5rem;
+    text-align: center;
+    color: $neon-green;
+    letter-spacing: 2px;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+  }
+
+  p:nth-of-type(2) {
+    max-width: 35rem;
+    font-size: 2.5rem;
+    text-align: center;
+    color: $light-cyan;
+    margin: 0 auto 3rem auto;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  div {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -30px;
+    width: 7rem;
+    margin: auto;
+    padding: 2rem;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: $neon-green;
+
+    img {
+      display: block;
+      margin: auto;
+      width: 2.5rem;
+    }
+  }
+}
