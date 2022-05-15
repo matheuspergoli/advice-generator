@@ -51,16 +51,22 @@ body {
     right: 0;
     bottom: -30px;
     width: 7rem;
+    height: 7rem;
     margin: auto;
     padding: 2rem;
     cursor: pointer;
     border-radius: 50%;
+    transition-duration: 200ms;
     background-color: $neon-green;
+    &:hover {
+      box-shadow: -1px 0 40px 2px $neon-green, 1px 0 40px 2px $neon-green;
+      filter: brightness(1.1);
+    }
 
     img {
       display: block;
       margin: auto;
-      width: 2.5rem;
+      // width: 2.5rem;
     }
   }
 }
