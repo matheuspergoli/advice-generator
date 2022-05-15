@@ -4,7 +4,7 @@ const btnGenerator = document.querySelector('[data-btn-generator]')
 
 async function getMessage() {
   try {
-    const response = await fetch('https://api.adviceslip.com/advici')
+    const response = await fetch('https://api.adviceslip.com/advice')
     const json = await response.json()
   
     const {slip: {advice, id}} = json
