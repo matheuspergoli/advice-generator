@@ -3,11 +3,17 @@ const adviceMessage = document.querySelector('[data-advice-message]')
 const btnGenerator = document.querySelector('[data-btn-generator]')
 
 async function getMessage() {
-  const response = await fetch('https://api.adviceslip.com/advice')
-  const json = await response.json()
-
-  adviceNumber.innerText = `Advice #${json.slip.id}`
-  adviceMessage.innerText = `"${json.slip.advice}"`
+  try {
+    const response = await fetch('https://api.adviceslip.com/advici')
+    const json = await response.json()
+  
+    const {slip: {advice, id}} = json
+    
+    adviceNumber.innerText = `Advice #${id}`
+    adviceMessage.innerText = `"${advice}"` 
+  } catch (error) {
+    console.log(error)
+  }
 }
 
 btnGenerator.addEventListener('click', getMessage)
