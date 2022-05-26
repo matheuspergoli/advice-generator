@@ -6,11 +6,11 @@ async function getMessage() {
   try {
     const response = await fetch('https://api.adviceslip.com/advice')
     const json = await response.json()
-  
-    const {slip: {advice, id}} = json
-    
+
+    const { slip: { advice, id } } = json
+
     adviceNumber.innerText = `Advice #${id}`
-    adviceMessage.innerText = `"${advice}"` 
+    adviceMessage.innerText = `"${advice}"`
   } catch (error) {
     console.log(error)
   }
